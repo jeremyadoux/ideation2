@@ -1,0 +1,27 @@
+{
+  "name": "workflow",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "options": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ideas": {
+      "type": "hasMany",
+      "model": "idea",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,34 @@
+{
+  "name": "voting",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "up": {
+      "type": "boolean"
+    },
+    "down": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "idea": {
+      "type": "belongsTo",
+      "model": "idea",
+      "foreignKey": ""
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "customer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

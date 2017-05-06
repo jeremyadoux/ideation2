@@ -1,0 +1,32 @@
+{
+  "name": "customer",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": ""
+    },
+    "ideas": {
+      "type": "hasMany",
+      "model": "idea",
+      "foreignKey": ""
+    },
+    "votings": {
+      "type": "hasMany",
+      "model": "voting",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
